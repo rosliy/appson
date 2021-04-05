@@ -1,0 +1,268 @@
+@import "../../node_modules/normalize.css/normalize";
+@import "vars";
+@import "libs";
+
+@import "media";
+
+body {
+    margin: 0;
+    
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    color: #000000;
+
+    background-color: #fff;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+p {
+    margin: 0 0 10px;
+}
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+/* ===============Container==============*/
+
+.container {
+    width: 100%;
+    max-width: 1890px;
+    margin: 0 auto;
+    padding: 0 140px;
+}
+
+.btn {
+    width: 165px;
+    height: 50px;
+
+    border-radius: 25px;
+    cursor: pointer;
+
+    
+    font-size: 16px;
+    
+    font-weight: 700;
+    line-height: 20px;
+    
+    text-decoration: none;
+    text-align: center;
+
+    &--white{
+        background-color: $white;
+        border: 2px solid $blue;
+        color: $blue;
+
+        &:hover{
+            background-color: #0063DD;
+            color: #fff;
+        }
+    }
+
+    &--blue{
+        background-color: #0063DD;
+        color: #fff;
+
+        &:hover{
+            background-color: $white;
+            border: 2px solid $blue;
+            color: $blue;
+        }
+    }
+    + .btn{
+        margin-left: 30px;
+    }
+}
+
+
+
+/* ===============Header=================*/
+
+.header {
+    width: 100%;
+    height: 100px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+
+.header__logo{
+    width: 179px;
+    height: 100px;
+    background-color: $blue;
+   
+    border-radius: 0px 0px 21.5px 21.5px;
+    text-align: center;
+    padding-top: 25px;   
+}
+
+.header__name{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    
+    color: $white; 
+}
+
+.nav {
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    align-items: center;
+    
+
+}
+.nav__link {
+    margin-right: 40px;
+
+    color: $gray;
+    text-decoration: none;
+    transition: color .1s linear;
+
+
+    &:hover {
+    color: $blue;
+    }
+
+    &:nth-child(4){
+        margin-right: 52px;
+    }
+}
+
+
+.intro{
+    display: flex;
+    
+    width: 100%;
+    height: 100vh;
+    max-height: 1029px;
+    overflow: hidden;
+    
+    
+    background: url("../images/bg.jpg") top right no-repeat;
+    background-size: cover;
+
+    &__inner{
+        max-width: 655px;
+        
+        margin: 188px auto 0;
+        text-align: center;
+    }
+
+    &__title{
+        margin-bottom: 30px;
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 45px;
+    }
+
+    &__text{
+        margin-bottom: 33px;
+
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 27px;
+
+        color: #929292;
+    }
+}
+
+.devices {
+    margin: 88px auto 0;
+    position: relative;
+    vertical-align: bottom;
+    
+    height: 514px;
+    width: 804px;
+
+    
+    
+    
+    
+}
+
+.devices__item2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    max-width: 409px;
+    height: auto;
+    z-index: 2;
+    
+}
+
+.devices__item1 {
+    position: absolute;
+    top: 91px;
+    left: -43px;
+    z-index: 1;
+} 
+
+.devices__item3 {
+    position: absolute;
+    top: 91px;
+    right: -25px;
+    z-index: 1;
+} 
+
+
+.functions{
+    width: 100%;
+    height: 635px;
+    background-color: #000;
+}
+.functions__inner{
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+
+    margin: 0 auto;
+    padding: 165px 0;
+}
+.func-item{
+    width: 392px;
+    height: 290px;
+    background-color: $white;
+    border-radius: 5px;
+    text-align: center; 
+    
+    &__title{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    &__info{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
